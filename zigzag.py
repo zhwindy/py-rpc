@@ -5,8 +5,8 @@ import time
 
 def main():
     """
-    整型数据编码: int8,int32,int64.unint,long
-    采用变长字节数
+    数据编码: int8,int32,int64.unint,long
+    将负数映射为正数,并结合varint编码
     """
     pass
 
