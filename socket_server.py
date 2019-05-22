@@ -2,7 +2,7 @@
 # encoding=utf-8
 import socket
 
-HOST, PORT = SERVER_ADDRESS = ('localhost', 8888)
+HOST, PORT = SERVER_ADDRESS = ('localhost', 9999)
 
 
 def rpc_server():

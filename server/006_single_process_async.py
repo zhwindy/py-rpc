@@ -32,7 +32,7 @@ class RPCHandler(asyncore.dispatcher_with_send):
             if len(content) < 1024:
                 break
         self.handle_rpc()
-    
+
     def handle_rpc(self):
         while True:
             self.buf.seek(0)
@@ -51,6 +51,7 @@ class RPCHandler(asyncore.dispatcher_with_send):
             
             left = self.buf.getvalue()[4 + length:]
             self.buf = StringIO()
+            # 将缓存剩余的内容写入新的缓存中
             self.buf.write(left)
 
         self.buf.seek(0, 2)
