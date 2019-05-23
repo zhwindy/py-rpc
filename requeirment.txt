@@ -2,3 +2,4 @@ requests
 grpcio
 protobuf
 grpcio-tools
+kazoo
