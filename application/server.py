@@ -99,7 +99,7 @@ class RPCHandler(asyncore.dispatcher_with_send):
 class RPCServer(asyncore.dispatcher):
 
     zk_root = "/demo"
-    zk_rpc = zk_root + "rpc"
+    zk_rpc = zk_root + "/rpc"
 
     def __init__(self, host, port):
         asyncore.dispatcher.__init__(self)
@@ -234,7 +234,8 @@ if __name__ == "__main__":
         port = 8888
     else:
         host = sys.argv[1]
-        port = sys.argv[2]
+        port = int(sys.argv[2])
+    print(host, port)
     RPCServer(host, port)
     print("RPC SERVER starting...")
     asyncore.loop()
